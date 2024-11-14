@@ -3,10 +3,11 @@ import Image from "next/image";
 import { ScrollArea } from "@daog/components/ui/scroll-area";
 import { Search } from "lucide-react";
 import HowToShop from "./how-to-shop";
+import JoinCommunity from "./join-community";
 
 export default function Page() {
   return (
-    <ScrollArea className="h-screen">
+    <ScrollArea className="h-screen bg-black">
       <div className="py-12 px-20">
         {/* Header */}
         <div className="flex items-center justify-between">
@@ -70,35 +71,7 @@ export default function Page() {
         {/* How to shop section */}
         <HowToShop />
         {/* Community Section */}
-        <div className="mt-20">
-          <h2 className="text-2xl font-bold text-white mb-10">
-            Join DAOG Gadgets Community
-          </h2>
-          <div className="grid grid-cols-2 gap-8">
-            <div className="bg-[#474747] p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-white mb-4">As a tech</h3>
-              <p className="text-white/80 mb-6">
-                Build money by sharing your tech gadgets that you do not need. A
-                passion for gadgets.
-              </p>
-              <div className="px-6 py-3 rounded-lg bg-white text-black font-medium">
-                Discover more
-              </div>
-            </div>
-            <div className="bg-[#474747] p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-white mb-4">
-                As a business
-              </h3>
-              <p className="text-white/80 mb-6">
-                DAOG Gadgets supports businesses that showcase their tech,
-                highly profitable store more.
-              </p>
-              <div className="px-6 py-3 rounded-lg bg-white text-black font-medium">
-                Partner with us
-              </div>
-            </div>
-          </div>
-        </div>
+        <JoinCommunity />
 
         {/* Download Section */}
         <div className="mt-20">
