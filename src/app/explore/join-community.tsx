@@ -10,7 +10,7 @@ const communityOptions = [
     description:
       "Earn rewards by shopping the latest tech products. All you need is a passion for gadgets.",
     buttonText: "Shop now",
-    icon: "/uploads/tech-person.png",
+    icon: "/uploads/tech-person.jpg",
   },
   {
     title: "As a business",
@@ -57,7 +57,7 @@ export default function JoinCommunity() {
                   width={200}
                   height={200}
                   alt={option.title}
-                  className="object-contain"
+                  className="object-contain rounded-full"
                 />
               </div>
             ))}
