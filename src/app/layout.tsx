@@ -9,12 +9,12 @@ import { Toaster } from "@daog/components/ui/toaster";
 const mtn = localFont({
   src: [
     {
-      path: "./assets/mtn/MTNBrighterSans-Bold.ttf",
+      path: "../assets/mtn/MTNBrighterSans-Bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "./assets/mtn/MTNBrighterSans-Regular.ttf",
+      path: "../assets/mtn/MTNBrighterSans-Regular.ttf",
       weight: "400",
       style: "normal",
     },
