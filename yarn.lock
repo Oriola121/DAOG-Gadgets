@@ -9816,9 +9816,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shadcn-sidebar@workspace:.":
+"daoggadgets@workspace:.":
   version: 0.0.0-use.local
-  resolution: "shadcn-sidebar@workspace:."
+  resolution: "daoggadgets@workspace:."
   dependencies:
     "@auth0/nextjs-auth0": "npm:^3.5.0"
     "@figma/code-connect": "npm:^1.1.4"

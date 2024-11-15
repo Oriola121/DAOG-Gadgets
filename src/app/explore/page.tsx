@@ -5,12 +5,12 @@ import { Search } from "lucide-react";
 import HowToShop from "./how-to-shop";
 import JoinCommunity from "./join-community";
 import DownloadApp from "./download-app";
+import Footer from "@daog/components/footer";
 
 export default function Page() {
   return (
     <ScrollArea className="h-screen bg-black">
       <div className="py-12 px-20">
-        {/* Header */}
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold text-white">
             EXPLORE
@@ -18,16 +18,21 @@ export default function Page() {
             TECH
           </h1>
           <div className="flex gap-4">
-            <div className="px-6 py-3 rounded-lg text-sm font-medium text-white bg-[#474747]">
+            <a
+              href="/api/auth/login"
+              className="px-6 py-3 rounded-lg text-sm font-medium text-white bg-[#474747]"
+            >
               Sign in
-            </div>
-            <div className="px-6 py-3 rounded-lg text-sm font-medium text-white bg-[#474747]">
+            </a>
+            <a
+              href="/api/auth/signup"
+              className="px-6 py-3 rounded-lg text-sm font-medium text-white bg-[#474747]"
+            >
               Sign up
-            </div>
+            </a>
           </div>
         </div>
 
-        {/* Hero Section */}
         <div className="flex items-center py-10 gap-10">
           <div className="w-1/3">
             <Image
@@ -69,13 +74,11 @@ export default function Page() {
           </div>
         </div>
 
-        {/* How to shop section */}
         <HowToShop />
-        {/* Community Section */}
         <JoinCommunity />
-        {/* Download Section */}
         <DownloadApp />
       </div>
+      <Footer />
     </ScrollArea>
   );
 }
