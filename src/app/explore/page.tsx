@@ -4,6 +4,7 @@ import { ScrollArea } from "@daog/components/ui/scroll-area";
 import { Search } from "lucide-react";
 import HowToShop from "./how-to-shop";
 import JoinCommunity from "./join-community";
+import DownloadApp from "./download-app";
 
 export default function Page() {
   return (
@@ -72,36 +73,8 @@ export default function Page() {
         <HowToShop />
         {/* Community Section */}
         <JoinCommunity />
-
         {/* Download Section */}
-        <div className="mt-20">
-          <h2 className="text-2xl font-bold text-white mb-10">
-            Download our app
-          </h2>
-          <div className="bg-[#474747] p-8 rounded-lg flex items-center gap-8">
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-white mb-4">
-                Shop with ease!
-              </h3>
-              <p className="text-white/80 mb-6">
-                Get the latest tech gadgets delivered to your doorstep with DAOG
-                Gadgets App, and get up to 30% discount with special flash sale!
-              </p>
-              <div className="px-6 py-3 rounded-lg bg-white text-black font-medium">
-                Download
-              </div>
-            </div>
-            <div className="w-1/4">
-              <Image
-                src="/uploads/smartwatch.png"
-                width={200}
-                height={200}
-                alt="Smart Watch App"
-                className="w-full"
-              />
-            </div>
-          </div>
-        </div>
+        <DownloadApp />
       </div>
     </ScrollArea>
   );
