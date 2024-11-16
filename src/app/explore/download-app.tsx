@@ -1,7 +1,6 @@
-"use client";
 import Image from "next/image";
 import { useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
+import { PiCaretDown } from "react-icons/pi";
 
 export default function DownloadApp() {
   const [isOpen, setIsOpen] = useState(true);
@@ -13,7 +12,7 @@ export default function DownloadApp() {
         className="w-full flex items-center justify-between py-6 border-y border-white/20"
       >
         <h2 className="text-2xl font-bold">Download our app</h2>
-        <FiChevronDown
+        <PiCaretDown
           className={`text-white transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}

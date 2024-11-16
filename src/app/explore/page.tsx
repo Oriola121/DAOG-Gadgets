@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { ScrollArea } from "@daog/components/ui/scroll-area";
@@ -6,8 +7,16 @@ import HowToShop from "./how-to-shop";
 import JoinCommunity from "./join-community";
 import DownloadApp from "./download-app";
 import Footer from "@daog/components/footer";
+import { useUser } from "@auth0/nextjs-auth0/client";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const { user } = useUser();
+  const router = useRouter();
+  if (user) {
+    router.push("/dashboard");
+  }
+
   return (
     <ScrollArea className="h-screen bg-black">
       <div className="py-12 px-20">
