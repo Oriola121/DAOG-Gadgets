@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "ui": "shadcn add"
+    "ui": "shadcn add",
+    "test": "jest"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.5.0",
@@ -63,15 +64,19 @@
     "zustand": "^5.0.0-rc.2"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.12",
+    "jest": "^29.7.0",
     "postcss": "^8",
     "shadcn": "^2.0.8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   },
   "packageManager": "yarn@4.4.1+sha512.f825273d0689cc9ead3259c14998037662f1dcd06912637b21a450e8da7cfeb4b1965bbee73d16927baa1201054126bc385c6f43ff4aa705c8631d26e12460f1"
 }
