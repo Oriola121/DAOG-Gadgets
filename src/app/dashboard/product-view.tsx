@@ -13,7 +13,6 @@ export default function ProductView() {
   if (loading && !products.length) {
     return <div className="p-6">Loading...</div>;
   }
-
   return (
     <div className="p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

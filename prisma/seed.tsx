@@ -64,6 +64,9 @@ async function main() {
 }
 
 main()
+  .then(() => {
+    console.log("hello");
+  })
   .catch((e) => console.error(e))
   .finally(async () => {
     await prisma.$disconnect();
