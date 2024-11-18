@@ -1,3 +1,5 @@
+"use client";
+
 import { Checkbox } from "@daog/components/ui/checkbox";
 import { Separator } from "@daog/components/ui/separator";
 import { useState } from "react";

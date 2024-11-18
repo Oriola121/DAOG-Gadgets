@@ -1,16 +1,27 @@
-import prisma from "@daog/lib/prisma";
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
+import { prisma } from "@daog/lib/prisma";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method === "GET") {
-    try {
-      const products = await prisma.product.findMany();
-      res.status(200).json(products);
-    } catch (error) {
-      res.status(500).json({ error: "Error fetching products" });
-    }
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const page = parseInt(searchParams.get("page") || "1");
+  const limit = parseInt(searchParams.get("limit") || "8");
+  const offset = (page - 1) * limit;
+
+  try {
+    const products = await prisma.product.findMany({
+      take: limit,
+      skip: offset,
+      orderBy: {
+        id: "desc",
+      },
+    });
+
+    return NextResponse.json(products);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch products" },
+      { status: 500 }
+    );
   }
 }
